@@ -1,0 +1,43 @@
+.HomePageMesos {
+    display: flex;
+    justify-content: center; /* Centers the table horizontally */
+    align-items: center; /* Centers the table vertically (if needed) */
+
+}
+.MesoTable {
+    margin-top: 2em;
+    width: 1000px;
+    align-content: center;
+    border-collapse: collapse;
+    font-size: 1.25em;
+    font-family: sans-serif;
+    min-width: 10px;
+}
+
+.MesoTable thead tr {
+    background-color: red;
+    color: #ffffff;
+    text-align: left;
+}
+
+.MesoTable th,
+.MesoTable td {
+    padding: 12px 15px;
+}
+
+.MesoTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.MesoTable tbody {
+    background-color: #f3f3f3;
+}
+
+.MesoTable tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.MesoTable tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}

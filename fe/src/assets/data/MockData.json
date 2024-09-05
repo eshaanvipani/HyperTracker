@@ -1,0 +1,64 @@
+[
+    {
+      "id": 1,
+      "title": "Tenth",
+      "duration": "6 WEEKS - 5 DAYS/WEEK",
+      "status": "CURRENT",
+      "notes": ""
+    },
+    {
+      "id": 2,
+      "title": "Eighth",
+      "duration": "6 WEEKS - 5 DAYS/WEEK",
+      "status": "",
+      "notes": "change weight on first sets after cud get more reps"
+    },
+    {
+      "id": 3,
+      "title": "Seventh",
+      "duration": "6 WEEKS - 5 DAYS/WEEK",
+      "status": "COMPLETED",
+      "completionDate": "MAY 16, 2024",
+      "notes": "Never go above 15 reps"
+    },
+    {
+      "id": 4,
+      "title": "Six",
+      "duration": "6 WEEKS - 5 DAYS/WEEK",
+      "status": "COMPLETED",
+      "completionDate": "FEB 23, 2024",
+      "notes": ""
+    },
+    {
+      "id": 5,
+      "title": "Fifth",
+      "duration": "5 WEEKS - 6 DAYS/WEEK",
+      "status": "COMPLETED",
+      "completionDate": "JAN 26, 2024",
+      "notes": ""
+    },
+    {
+      "id": 6,
+      "title": "Fourth",
+      "duration": "5 WEEKS - 6 DAYS/WEEK",
+      "status": "COMPLETED",
+      "completionDate": "DEC 22, 2023",
+      "notes": ""
+    },
+    {
+      "id": 7,
+      "title": "Third",
+      "duration": "5 WEEKS - 6 DAYS/WEEK",
+      "status": "COMPLETED",
+      "completionDate": "NOV 20, 2023",
+      "notes": ""
+    },
+    {
+      "id": 8,
+      "title": "Second",
+      "duration": "5 WEEKS - 6 DAYS/WEEK",
+      "status": "COMPLETED",
+      "completionDate": "",
+      "notes": ""
+    }
+  ]

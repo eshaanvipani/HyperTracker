@@ -1,0 +1,14 @@
+.MButton {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    font-weight: bold;
+    position: absolute; /* Position the button relative to its nearest positioned ancestor */
+    top: 30px; /* Adjust as needed to move down from the very top */
+    right: 30px; /* Adjust as needed to move right from the very left */
+    z-index: 1000; /* Optional: Ensure it stays above other content */
+  }
