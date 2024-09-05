@@ -3,7 +3,6 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 import { CgGym } from "react-icons/cg";
-import { PiLegoSmileyBold } from "react-icons/pi";
 
 
 
@@ -24,7 +23,7 @@ export const SidebarData = [
     {
         title : "Plan a new Mesocycle",
         path : '/plan-meso',
-        icon : <PiLegoSmileyBold/>,
+        icon : <FaIcons.FaHome/>,
         cName: 'nav-text'
     }
 ]
