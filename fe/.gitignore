@@ -1,4 +1,2 @@
 # Ignore node_modules and cache files
-node_modules/
-.cache/
-*.pack
+/node_modules
