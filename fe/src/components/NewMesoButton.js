@@ -18,8 +18,7 @@ function NewMesoButton() {
             <FaIcons.FaPlus/>
             &nbsp; Add Meso
             </button>
-            <MesoPopup trigger={mesoPopup}>
-                <h3>mypop</h3>
+            <MesoPopup trigger={mesoPopup} setTrigger={setmesoPopup}>
             </MesoPopup>
             
         </div>

@@ -1,8 +1,7 @@
 import React from 'react'
 import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
-import * as IoIcons from "react-icons/io";
 import { CgGym } from "react-icons/cg";
+import { GoSmiley } from "react-icons/go";
 
 
 
@@ -23,7 +22,7 @@ export const SidebarData = [
     {
         title : "Plan a new Mesocycle",
         path : '/plan-meso',
-        icon : <FaIcons.FaHome/>,
+        icon : <GoSmiley />,
         cName: 'nav-text'
     }
 ]
