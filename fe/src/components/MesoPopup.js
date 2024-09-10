@@ -1,9 +1,11 @@
 import React, { useState,useRef } from 'react';
 import "./MesoPopup.css"
 import { RiArrowGoBackFill } from "react-icons/ri";
+import axios  from 'axios';
 
 
 function MesoPopup(props) {
+  const url = "http://localhost:5016/MesoCycleAPI"
 
   const [formData, setFormData] = useState({
     mesoName: '',
@@ -22,15 +24,24 @@ function MesoPopup(props) {
       ...prevState,
       [name]: value,
     }));
-    
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData); // Handle the form data as needed
+    console.log('Form Data:', formData);
 
-    // Perform validation checks on formData
-    // If valid, submit the data
+    // Make the POST request here
+    axios
+      .post(url, {
+        mesoName: formData.mesoName,
+        mesoNotes: formData.mesoNotes,
+      })
+      .then((res) => {
+        console.log('Response:', res.data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   };
 
 
