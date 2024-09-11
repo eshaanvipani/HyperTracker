@@ -7,23 +7,34 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
+
+
+
+def dataIsClean(json):
+    for meso in json:
+        if not meso.get('mesoLength', '').isdigit():
+            return False
+        if len(meso.get('mesoLength', '')) == 0 or len(meso.get('mesoNotes', '')) == 0 or len(meso.get('mesoName', '')) == 0:
+            return False
+    return True
+
+
 @app.route('/submit', methods=['POST'])
 def receive_data():
     data = request.json  
     temp=True
-    if temp or self.dataIsClean():
+    if isinstance(data, dict):
+        data = [data]
+    if dataIsClean(data):
         print("Received data:", data) 
         writingData=json.dumps(data)
         file=open("mesocycleData.json","a")
         file.write(writingData)
         file.close()
     else:
-        return "Dirty Data"
+        return "Dirty Data",400
 
-    return "Successfully received data"
-# def dataIsClean(json):
-#     for meso in json:
-#         if meso
+    return "Successfully received data",200
 
 
 
