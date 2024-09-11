@@ -1,22 +1,22 @@
 import React, { useState,useRef } from 'react';
 import "./MesoPopup.css"
 import { RiArrowGoBackFill } from "react-icons/ri";
-import axios  from 'axios';
+import axios from 'axios';
 
 
 function MesoPopup(props) {
-  const url = "http://localhost:5016/MesoCycleAPI"
 
   const [formData, setFormData] = useState({
     mesoName: '',
     mesoNotes: '',
   });
-  const mesoData = useRef();
+  const url = 'http://localhost:5000/submit'
 
-  const handleClick=()=>{
-    console.log(mesoData)
+  let sendData = () => {
+    axios.post(url, formData)
+       .then(res => console.log('Data send'))
+       .catch(err => console.log(err.data))
   }
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,24 +24,20 @@ function MesoPopup(props) {
       ...prevState,
       [name]: value,
     }));
+    
   };
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Data:', formData);
 
-    // Make the POST request here
-    axios
-      .post(url, {
-        mesoName: formData.mesoName,
-        mesoNotes: formData.mesoNotes,
-      })
-      .then((res) => {
-        console.log('Response:', res.data);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+    sendData();
+    // Clear form data
+    setFormData({
+      mesoName: '',
+      mesoNotes: '',
+    });
   };
 
 
@@ -59,7 +55,7 @@ function MesoPopup(props) {
             <input type="text" name="mesoName" value={formData.mesoName} onChange={handleChange} placeholder='MesoCycle#'></input>
 
 
-            <input ref={mesoData} type="text" name="mesoNotes" value={formData.mesoNotes} onChange={handleChange} placeholder='MesoNotes#'></input>            
+            <input type="text" name="mesoNotes" value={formData.mesoNotes} onChange={handleChange} placeholder='MesoNotes#'></input>            
             <button type='submit' id="btn">Click to Add</button>
 
             </form>
