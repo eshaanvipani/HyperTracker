@@ -53,8 +53,6 @@ function MesoPopup(props) {
             <form className='form' onSubmit={handleSubmit}>
             <h1 className='header'>Mesocycle Number</h1>
             <input type="text" name="mesoName" value={formData.mesoName} onChange={handleChange} placeholder='MesoCycle#'></input>
-
-
             <input type="text" name="mesoNotes" value={formData.mesoNotes} onChange={handleChange} placeholder='MesoNotes#'></input>            
             <button type='submit' id="btn">Click to Add</button>
 
