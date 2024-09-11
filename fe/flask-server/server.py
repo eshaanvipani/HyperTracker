@@ -21,6 +21,10 @@ def receive_data():
         return "Dirty Data"
 
     return "Successfully received data"
+# def dataIsClean(json):
+#     for meso in json:
+#         if meso
+
 
 
 if __name__ == "__main__":
