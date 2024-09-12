@@ -3,7 +3,7 @@ import NavigationSideBar from './NavigationSideBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Mesocycles from '../pages/Mesocycles';
-import PlanMeso from '../pages/Mesocycles';
+import PlanMeso from '../pages/PlanMeso';
 
 
 function App() {

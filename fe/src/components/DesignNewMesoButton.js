@@ -14,7 +14,7 @@ function DesignNewMesoButton() {
         <>
         <div className='MesoB'>
 
-            <button className='MButton' onClick={() => setmesoPopup(true)}>
+            <button className='DMButton' onClick={() => setmesoPopup(true)}>
             <FaIcons.FaPlus/>
             &nbsp; Add Meso
             </button>
